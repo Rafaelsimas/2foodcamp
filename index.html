@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>FoodCamp</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-login">
+        <div class="login">
+          <img src="./assets/img/lion1.svg" alt="" />
+          <div class="action-login">
+            <div class="box-input">
+              <ion-icon name="person-outline"></ion-icon>
+              <input id="userName" type="text" placeholder="Username" />
+            </div>
+            <div class="box-input">
+              <ion-icon name="home-outline"></ion-icon>
+              S
+              <input id="passwordKey" placeholder="End. Entrega" />
+            </div>
+            <div class="box-input">
+              <ion-icon name="call-outline"></ion-icon>
+              S
+              <input id="contact" placeholder="contato (xx)xxxxxxxxx" />
+            </div>
+            <button onclick="enterApp()">Entrar</button>
+          </div>
+        </div>
+      </div>
+      <div class="box-app displayHidden">
+        <div class="box-menu">
+          <div class="menu">
+            <div class="title-section poppins-bold">
+              <img src="./assets/img/lion1.svg" alt="" />
+            </div>
+            <div class="box-notification">
+              <ion-icon name="heart-outline"></ion-icon>
+              <div class="count-notification">
+                <div class="numberCount">0</div>
+                <ion-icon name="cart-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="carrossel">
+          <li>
+            <img
+              class="img-carrossel"
+              src="https://img.freepik.com/psd-gratuitas/modelo-de-banner-horizontal-para-lanchonete_23-2148714454.jpg"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              class="img-carrossel"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrYz-n7nPh8j9CB-5QqbNMG7LXuqxwSS6LEKx4U_KGy_m7luhxvM111VvyvJHlEkM8T4Q&usqp=CAU"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              class="img-carrossel"
+              src="https://img.freepik.com/psd-gratuitas/modelo-de-banner-de-comida-americana_23-2148474716.jpg"
+              alt=""
+            />
+          </li>
+        </ul>
+
+        <div class="box-search">
+          <button><ion-icon name="search-outline"></ion-icon></button>
+          <input type="text" placeholder="Buscar" />
+        </div>
+
+        <section class="main">
+          <div class="title-section poppins-light">Escolha seu prato</div>
+          <ul class="section dish">
+            <li
+              class="option nhoque"
+              onclick="selectOptionDish('.nhoque', 'Nhoque de Carne', 17.90)"
+            >
+              <img
+                src="https://guiadacozinha.com.br/wp-content/uploads/2019/10/nhoque-batata-molho-calabresa.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Nhoque de Carne</div>
+              <div class="description-dish poppins-light">
+                Massa leve com molho vermelho e carne
+              </div>
+              <div class="box-details" onclick="openMore()">
+                <div class="price poppins-extralight">17,40</div>
+              </div>
+            </li>
+
+            <li
+              class="option bife"
+              onclick="selectOptionDish('.bife', 'Bife a Cavalo', 20.90)"
+            >
+              <img
+                src="https://www.sabornamesa.com.br/media/k2/items/cache/8d00d7ae4f3b1af3be8d6d077cf2f6c4_XL.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Bife a Cavalo</div>
+              <div class="description-dish poppins-light">
+                Delicioso bife com ovoes e frias e arroz
+              </div>
+              <div class="price poppins-extralight">20,90</div>
+            </li>
+
+            <li
+              class="option feijoada"
+              onclick="selectOptionDish('.feijoada', 'Feijoada', 20.90)"
+            >
+              <img
+                src="https://assets.unileversolutions.com/recipes-v2/229468.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Feijoada</div>
+              <div class="description-dish poppins-light">
+                Feijoada completa especial para 2
+              </div>
+              <div class="price poppins-extralight">20,90</div>
+            </li>
+          </ul>
+
+          <div class="title-section poppins-light">Escolha sua bebida</div>
+          <ul class="section drink">
+            <li
+              class="option limoneto"
+              onclick="selectOptionDrink('.limoneto', 'Limoneto', 12.50)"
+            >
+              <img
+                src="https://naturaldaterra.com.br/media/catalog/product/cache/90a67334732b2408839e146d4f241496/1/4/149449---7892840812874---refrig-h2oh-limoneto-1-5l.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Limoneto 1.5 litros</div>
+              <div class="description-dish poppins-light">
+                Bebida de limão muito gelada
+              </div>
+              <div class="price poppins-extralight">12,50</div>
+            </li>
+            <li
+              class="option coca"
+              onclick="selectOptionDrink('.coca', 'Coca-cola', 12.90)"
+            >
+              <img
+                src="https://www.bernardaoemcasa.com.br/media/catalog/product/cache/1/image/500x500/9df78eab33525d08d6e5fb8d27136e95/9/8/9854-refrigerante-coca-cola-1l-pet-g.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Coca-cola</div>
+              <div class="description-dish poppins-light">
+                Bebida muita gelada.
+              </div>
+              <div class="price poppins-extralight">12,90</div>
+            </li>
+
+            <li
+              class="option fanta"
+              onclick="selectOptionDrink('.fanta', 'Fanta Laranja', 12.90)"
+            >
+              <img
+                src="https://www.drogariaminasbrasil.com.br/media/product/55e/refrigerante-fanta-laranja-pet-200ml-4a8.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Fanta Laranja</div>
+              <div class="description-dish poppins-light">
+                Bebida muita gelada.
+              </div>
+              <div class="price poppins-extralight">12,90</div>
+            </li>
+          </ul>
+
+          <div class="title-section poppins-light">Escolha sua sobremesa</div>
+          <ul class="section dessert">
+            <li
+              class="option pudim"
+              onclick="selectOptionDessert('.pudim', 'Pudim de Leite', 6.90)"
+            >
+              <img
+                src="https://static.itdg.com.br/images/360-240/d1307a2e17cda187df76b78cfd3ac464/shutterstock-2322251819-1-.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Pudim de leite</div>
+              <div class="description-dish poppins-light">
+                Deliciosa sobremesa com calda especial
+              </div>
+              <div class="price poppins-extralight">6,90</div>
+            </li>
+            <li
+              class="option tortaDeMorango"
+              onclick="selectOptionDessert('.tortaDeMorango', 'Torta de Morango', 7.90)"
+            >
+              <img
+                src="https://s2-receitas.glbimg.com/uRth3GOeTT0bAg0kCepsya9hzGY=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/i/U/suBeA8RdyF6iDr0gEaBg/torta-de-morango-1-.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Torta de Morango</div>
+              <div class="description-dish poppins-light">
+                Sobremesa especial gelada
+              </div>
+              <div class="price poppins-extralight">7,90</div>
+            </li>
+            <li
+              class="option nozes"
+              onclick="selectOptionDessert('.nozes', 'Torta de Nozes', 10.00)"
+            >
+              <img
+                src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/efdaa07ff25d0d0263ece9f2c59c1bb9.jpg"
+                alt=""
+              />
+              <div class="name-dish poppins-medium">Torta de Nozes</div>
+              <div class="description-dish poppins-light">
+                Torta especial de nozes com pedaços
+              </div>
+              <div class="price poppins-extralight">10,00</div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="toggle-order">
+          <div class="box-resume-order"></div>
+        </div>
+
+        <div class="box-overlay">
+          <div class="btn-overlay">
+            <button onclick="openDrawer()" class="btn">
+              Selecione (1) item de cada categoria.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
